@@ -1,8 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 const Index = () => {
+  const [selectedColor, setSelectedColor] = useState("beige");
+
+  const colors = [
+    {
+      id: "beige",
+      name: "Бежевый",
+      color: "#d4a574",
+      image: "https://cdn.poehali.dev/files/20764d4d-1cc7-4b1c-ac3d-de037e1fd0ba.jpg"
+    },
+    {
+      id: "blue",
+      name: "Синий",
+      color: "#4a90e2",
+      image: "https://cdn.poehali.dev/files/c3b7e45b-d47c-48bb-85c2-d23e46636862.jpg"
+    },
+    {
+      id: "beige-perforated",
+      name: "Бежевый с перфорацией",
+      color: "#d4a574",
+      pattern: "radial-gradient(circle at 30% 30%, #8b6f47 2px, transparent 2px), radial-gradient(circle at 70% 60%, #8b6f47 2px, transparent 2px), radial-gradient(circle at 50% 80%, #8b6f47 2px, transparent 2px)",
+      patternSize: "20px 20px",
+      image: "https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg"
+    },
+    {
+      id: "pink",
+      name: "Розовый",
+      color: "#e91e63",
+      image: "https://cdn.poehali.dev/files/7e2c08cd-2e98-4a2f-9194-fb168168b1cc.jpg"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
@@ -83,10 +115,34 @@ const Index = () => {
             <div className="relative animate-scale-in order-1 lg:order-2">
               <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
               <img
-                src="https://cdn.poehali.dev/files/801001df-2fa8-4def-8702-90c1c2f25cb5.jpeg"
-                alt="Кинезио тейп LEGIONER с упаковкой"
-                className="relative rounded-3xl shadow-2xl w-full hover:scale-105 transition-transform duration-500"
+                src={colors.find(c => c.id === selectedColor)?.image}
+                alt="Кинезио тейп LEGIONER"
+                className="relative rounded-3xl shadow-2xl w-full transition-all duration-500"
               />
+              
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border">
+                <p className="text-sm text-muted-foreground mb-3 text-center">Выберите цвет:</p>
+                <div className="flex gap-3">
+                  {colors.map((colorOption) => (
+                    <button
+                      key={colorOption.id}
+                      onClick={() => setSelectedColor(colorOption.id)}
+                      className={`w-14 h-14 rounded-full border-4 transition-all duration-300 hover:scale-110 ${
+                        selectedColor === colorOption.id
+                          ? 'border-accent shadow-lg scale-110'
+                          : 'border-border hover:border-accent/50'
+                      }`}
+                      style={{
+                        background: colorOption.pattern 
+                          ? `${colorOption.color}, ${colorOption.pattern}`
+                          : colorOption.color,
+                        backgroundSize: colorOption.patternSize || 'auto'
+                      }}
+                      title={colorOption.name}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -94,32 +150,42 @@ const Index = () => {
 
       <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 mb-20 items-center">
-            <div className="grid grid-cols-2 gap-4">
-              <img
-                src="https://cdn.poehali.dev/files/bf728622-0091-43f7-b667-49b2c580815b.jpeg"
-                alt="Кинезио тейп бежевый с упаковкой"
-                className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-              />
-              <img
-                src="https://cdn.poehali.dev/files/9e52412d-029d-479b-b4a6-3be22d4f7506.jpeg"
-                alt="Цветные кинезио тейпы - синий, бежевый, коричневый, розовый"
-                className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Разнообразие цветов для любого стиля
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Выбирайте из широкой палитры цветов: бежевый, синий, коричневый, розовый и другие. Каждый тейп сочетает стиль и функциональность.
-              </p>
-              <div className="flex gap-3 pt-2">
-                <div className="w-12 h-12 rounded-full bg-[#d4a574] border-2 border-border shadow-md"></div>
-                <div className="w-12 h-12 rounded-full bg-[#4a90e2] border-2 border-border shadow-md"></div>
-                <div className="w-12 h-12 rounded-full bg-[#a67c52] border-2 border-border shadow-md"></div>
-                <div className="w-12 h-12 rounded-full bg-[#e91e63] border-2 border-border shadow-md"></div>
-              </div>
+          <div className="max-w-4xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+              Выберите свой цвет
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-12">
+              Доступны 4 цвета, включая бежевый с перфорацией для лучшей вентиляции
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {colors.map((colorOption) => (
+                <button
+                  key={colorOption.id}
+                  onClick={() => setSelectedColor(colorOption.id)}
+                  className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
+                    selectedColor === colorOption.id
+                      ? 'border-accent bg-accent/10 shadow-xl'
+                      : 'border-border hover:border-accent/50 bg-card'
+                  }`}
+                >
+                  <div className="flex flex-col items-center gap-4">
+                    <div
+                      className="w-20 h-20 rounded-full shadow-lg border-4 border-background"
+                      style={{
+                        background: colorOption.pattern 
+                          ? `${colorOption.color}, ${colorOption.pattern}`
+                          : colorOption.color,
+                        backgroundSize: colorOption.patternSize || 'auto'
+                      }}
+                    />
+                    <span className="text-sm font-semibold text-center">{colorOption.name}</span>
+                    {selectedColor === colorOption.id && (
+                      <Icon name="Check" size={20} className="text-accent absolute top-2 right-2" />
+                    )}
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
 
