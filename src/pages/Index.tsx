@@ -150,6 +150,81 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
+            Отзывы наших клиентов
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                name: "Алексей М.",
+                rating: 5,
+                text: "Использую эти тейпы уже 3 месяца. Отличная поддержка для коленей при беге. Держатся действительно несколько дней, даже после душа!",
+                sport: "Бег"
+              },
+              {
+                name: "Марина К.",
+                rating: 5,
+                text: "Заказала розовые тейпы для фитнеса. Качество на высоте, клеятся легко, не вызывают раздражения. Рекомендую!",
+                sport: "Фитнес"
+              },
+              {
+                name: "Дмитрий П.",
+                rating: 4,
+                text: "Тренер посоветовал эти тейпы для восстановления после травмы плеча. Реально помогают! Буду заказывать ещё.",
+                sport: "Тяжёлая атлетика"
+              },
+              {
+                name: "Елена С.",
+                rating: 5,
+                text: "Занимаюсь йогой, использую для поддержки спины. Очень довольна качеством и ценой. Доставка быстрая!",
+                sport: "Йога"
+              },
+              {
+                name: "Игорь В.",
+                rating: 5,
+                text: "Заказал на Озоне синие тейпы. Пришли быстро, упаковка качественная. Использую для футбола - голеностоп держат отлично!",
+                sport: "Футбол"
+              },
+              {
+                name: "Анна Т.",
+                rating: 5,
+                text: "Лучшие тейпы, что я пробовала! Водостойкие, дышащие, не отклеиваются. Беру уже третий раз для танцев.",
+                sport: "Танцы"
+              }
+            ].map((review, index) => (
+              <Card
+                key={index}
+                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={24} className="text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg">{review.name}</h4>
+                    <p className="text-sm text-muted-foreground">{review.sport}</p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Icon key={i} name="Star" size={18} className="text-accent fill-accent" />
+                  ))}
+                </div>
+                
+                <p className="text-muted-foreground leading-relaxed">
+                  {review.text}
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-primary/10 border-y border-border">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
