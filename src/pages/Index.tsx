@@ -59,15 +59,15 @@ const Index = () => {
         <div className="container relative mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in order-2 lg:order-1">
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex flex-col items-start gap-3 mb-4">
                 <img 
                   src="https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/d7da9ecf-e9a9-4a19-9124-cc42b97ac8cb.jpg" 
                   alt="Legioner Sports" 
-                  className="w-20 h-20 rounded-xl shadow-lg"
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-2xl border-4 border-accent/20"
                 />
                 <div>
-                  <div className="text-sm text-accent font-semibold tracking-wider">LEGIONER SPORTS</div>
-                  <div className="text-xs text-muted-foreground">Профессиональное качество</div>
+                  <div className="text-2xl md:text-3xl text-accent font-bold tracking-wide">LEGIONER SPORTS</div>
+                  <div className="text-sm text-muted-foreground">Профессиональное качество</div>
                 </div>
               </div>
               
