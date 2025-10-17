@@ -4,16 +4,16 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 blur-3xl"></div>
+    <div className="min-h-screen bg-background">
+      <section className="relative overflow-hidden bg-gradient-to-b from-background to-card">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-muted/5 to-accent/5"></div>
         
         <div className="container relative mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Спортивные{" "}
-                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                <span className="text-accent">
                   Тейпы
                 </span>
               </h1>
@@ -25,7 +25,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   onClick={() => window.open('https://www.wildberries.ru', '_blank')}
                 >
                   <Icon name="ShoppingCart" size={24} className="mr-2" />
@@ -34,7 +34,7 @@ const Index = () => {
                 
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   onClick={() => window.open('https://www.ozon.ru', '_blank')}
                 >
                   <Icon name="Package" size={24} className="mr-2" />
@@ -43,7 +43,7 @@ const Index = () => {
                 
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-background shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                   onClick={() => window.open('https://market.yandex.ru', '_blank')}
                 >
                   <Icon name="Store" size={24} className="mr-2" />
@@ -53,7 +53,7 @@ const Index = () => {
             </div>
 
             <div className="relative animate-scale-in">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-20"></div>
+              <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
               <img
                 src="https://cdn.poehali.dev/files/801001df-2fa8-4def-8702-90c1c2f25cb5.jpeg"
                 alt="Кинезио тейп LEGIONER с упаковкой"
@@ -64,7 +64,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 mb-20 items-center">
             <div className="grid grid-cols-2 gap-4">
@@ -87,10 +87,10 @@ const Index = () => {
                 Выбирайте из широкой палитры цветов: бежевый, синий, коричневый, розовый и другие. Каждый тейп сочетает стиль и функциональность.
               </p>
               <div className="flex gap-3 pt-2">
-                <div className="w-12 h-12 rounded-full bg-[#d4a574] border-2 border-gray-300 shadow-md"></div>
-                <div className="w-12 h-12 rounded-full bg-[#4a90e2] border-2 border-gray-300 shadow-md"></div>
-                <div className="w-12 h-12 rounded-full bg-[#a67c52] border-2 border-gray-300 shadow-md"></div>
-                <div className="w-12 h-12 rounded-full bg-[#e91e63] border-2 border-gray-300 shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#d4a574] border-2 border-border shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#4a90e2] border-2 border-border shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#a67c52] border-2 border-border shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#e91e63] border-2 border-border shadow-md"></div>
               </div>
             </div>
           </div>
@@ -137,8 +137,8 @@ const Index = () => {
                 className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                  <Icon name={feature.icon} size={32} className="text-white" />
+                <div className="w-16 h-16 bg-primary/20 border border-primary/30 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                  <Icon name={feature.icon} size={32} className="text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -150,8 +150,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary via-secondary to-accent">
-        <div className="container mx-auto px-4 text-center text-white">
+      <section className="py-16 md:py-24 bg-primary/10 border-y border-border">
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
             Готовы улучшить свои тренировки?
           </h2>
@@ -162,8 +162,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
             <Button
               size="lg"
-              variant="secondary"
-              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-white text-primary hover:bg-gray-100"
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-primary hover:bg-primary/90"
               onClick={() => window.open('https://www.wildberries.ru', '_blank')}
             >
               <Icon name="ShoppingCart" size={28} className="mr-3" />
@@ -172,8 +171,7 @@ const Index = () => {
             
             <Button
               size="lg"
-              variant="secondary"
-              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-white text-primary hover:bg-gray-100"
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-secondary hover:bg-secondary/90"
               onClick={() => window.open('https://www.ozon.ru', '_blank')}
             >
               <Icon name="Package" size={28} className="mr-3" />
@@ -182,8 +180,7 @@ const Index = () => {
             
             <Button
               size="lg"
-              variant="secondary"
-              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-white text-primary hover:bg-gray-100"
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-accent hover:bg-accent/90 text-background"
               onClick={() => window.open('https://market.yandex.ru', '_blank')}
             >
               <Icon name="Store" size={28} className="mr-3" />
@@ -193,7 +190,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 bg-muted/50 border-t">
+      <footer className="py-12 bg-card border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground text-lg">
             © 2024 Спортивные Тейпы. Профессиональная поддержка для спортсменов.
