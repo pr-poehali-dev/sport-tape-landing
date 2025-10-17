@@ -5,14 +5,42 @@ import Icon from "@/components/ui/icon";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/d7da9ecf-e9a9-4a19-9124-cc42b97ac8cb.jpg" 
+              alt="Legioner Sports Logo" 
+              className="w-12 h-12 rounded-lg"
+            />
+            <div>
+              <h2 className="text-xl font-bold text-accent">LEGIONER SPORTS</h2>
+              <p className="text-xs text-muted-foreground">Кинезио тейпы</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-card">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-muted/5 to-accent/5"></div>
         
         <div className="container relative mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in order-2 lg:order-1">
+              <div className="flex items-center gap-4 mb-6">
+                <img 
+                  src="https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/d7da9ecf-e9a9-4a19-9124-cc42b97ac8cb.jpg" 
+                  alt="Legioner Sports" 
+                  className="w-20 h-20 rounded-xl shadow-lg"
+                />
+                <div>
+                  <div className="text-sm text-accent font-semibold tracking-wider">LEGIONER SPORTS</div>
+                  <div className="text-xs text-muted-foreground">Профессиональное качество</div>
+                </div>
+              </div>
+              
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Спортивные{" "}
+                Кинезио{" "}
                 <span className="text-accent">
                   Тейпы
                 </span>
