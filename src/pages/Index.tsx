@@ -10,7 +10,7 @@ const Index = () => {
         
         <div className="container relative mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in order-2 lg:order-1">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Спортивные{" "}
                 <span className="text-accent">
@@ -22,10 +22,10 @@ const Index = () => {
                 Профессиональная поддержка для мышц и суставов. Максимальная эффективность при тренировках и восстановлении.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   onClick={() => window.open('https://www.wildberries.ru', '_blank')}
                 >
                   <Icon name="ShoppingCart" size={24} className="mr-2" />
@@ -34,7 +34,7 @@ const Index = () => {
                 
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   onClick={() => window.open('https://www.ozon.ru', '_blank')}
                 >
                   <Icon name="Package" size={24} className="mr-2" />
@@ -43,7 +43,7 @@ const Index = () => {
                 
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-background shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-background shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   onClick={() => window.open('https://market.yandex.ru', '_blank')}
                 >
                   <Icon name="Store" size={24} className="mr-2" />
@@ -52,7 +52,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative animate-scale-in">
+            <div className="relative animate-scale-in order-1 lg:order-2">
               <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
               <img
                 src="https://cdn.poehali.dev/files/801001df-2fa8-4def-8702-90c1c2f25cb5.jpeg"
