@@ -55,8 +55,8 @@ const Index = () => {
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-20"></div>
               <img
-                src="https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/13e5f2d6-849c-4856-b929-a7411def4604.jpg"
-                alt="Спортивные тейпы"
+                src="https://cdn.poehali.dev/files/801001df-2fa8-4def-8702-90c1c2f25cb5.jpeg"
+                alt="Кинезио тейп LEGIONER с упаковкой"
                 className="relative rounded-3xl shadow-2xl w-full hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -66,6 +66,35 @@ const Index = () => {
 
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 mb-20 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="https://cdn.poehali.dev/files/bf728622-0091-43f7-b667-49b2c580815b.jpeg"
+                alt="Кинезио тейп бежевый с упаковкой"
+                className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+              />
+              <img
+                src="https://cdn.poehali.dev/files/9e52412d-029d-479b-b4a6-3be22d4f7506.jpeg"
+                alt="Цветные кинезио тейпы - синий, бежевый, коричневый, розовый"
+                className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Разнообразие цветов для любого стиля
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Выбирайте из широкой палитры цветов: бежевый, синий, коричневый, розовый и другие. Каждый тейп сочетает стиль и функциональность.
+              </p>
+              <div className="flex gap-3 pt-2">
+                <div className="w-12 h-12 rounded-full bg-[#d4a574] border-2 border-gray-300 shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#4a90e2] border-2 border-gray-300 shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#a67c52] border-2 border-gray-300 shadow-md"></div>
+                <div className="w-12 h-12 rounded-full bg-[#e91e63] border-2 border-gray-300 shadow-md"></div>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-slide-up">
             Преимущества наших тейпов
           </h2>
