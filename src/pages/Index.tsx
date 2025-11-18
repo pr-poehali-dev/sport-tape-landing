@@ -23,8 +23,8 @@ const Index = () => {
       id: "beige-perforated",
       name: "Бежевый с перфорацией",
       color: "#d4a574",
-      pattern: "radial-gradient(circle at 30% 30%, #8b6f47 2px, transparent 2px), radial-gradient(circle at 70% 60%, #8b6f47 2px, transparent 2px), radial-gradient(circle at 50% 80%, #8b6f47 2px, transparent 2px)",
-      patternSize: "20px 20px",
+      pattern: "radial-gradient(circle at 20% 20%, transparent 3px, #d4a574 3px), radial-gradient(circle at 60% 50%, transparent 3px, #d4a574 3px), radial-gradient(circle at 40% 80%, transparent 3px, #d4a574 3px)",
+      patternSize: "25px 25px",
       image: "https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg"
     },
     {
@@ -41,7 +41,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
             <img 
-              src="https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/d7da9ecf-e9a9-4a19-9124-cc42b97ac8cb.jpg" 
+              src="https://cdn.poehali.dev/files/df6ab86a-7ed4-44c5-9351-61f8675fca15.jpg" 
               alt="Legioner Sports Logo" 
               className="w-12 h-12 rounded-lg"
             />
@@ -61,7 +61,7 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in order-2 lg:order-1">
               <div className="flex flex-col items-start gap-3 mb-4">
                 <img 
-                  src="https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/d7da9ecf-e9a9-4a19-9124-cc42b97ac8cb.jpg" 
+                  src="https://cdn.poehali.dev/files/df6ab86a-7ed4-44c5-9351-61f8675fca15.jpg" 
                   alt="Legioner Sports" 
                   className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-2xl border-4 border-accent/20"
                 />
