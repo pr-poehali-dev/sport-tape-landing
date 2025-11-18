@@ -85,8 +85,8 @@ const Index = () => {
               <div className="flex flex-col gap-4 pt-4">
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-                  onClick={() => window.open('https://www.wildberries.ru', '_blank')}
+                  className="text-lg px-8 py-6 bg-[#cb11ab] hover:bg-[#cb11ab]/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  onClick={() => window.open('https://www.wildberries.ru/seller/670383', '_blank')}
                 >
                   <Icon name="ShoppingCart" size={24} className="mr-2" />
                   Купить на Wildberries
@@ -94,8 +94,8 @@ const Index = () => {
                 
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-                  onClick={() => window.open('https://www.ozon.ru', '_blank')}
+                  className="text-lg px-8 py-6 bg-[#005bff] hover:bg-[#005bff]/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  onClick={() => window.open('https://www.ozon.ru/seller/vm-1024153/?miniapp=seller_1024153', '_blank')}
                 >
                   <Icon name="Package" size={24} className="mr-2" />
                   Купить на Ozon
@@ -103,8 +103,8 @@ const Index = () => {
                 
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-background shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-                  onClick={() => window.open('https://market.yandex.ru', '_blank')}
+                  className="text-lg px-8 py-6 bg-[#fc0] hover:bg-[#fc0]/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  onClick={() => window.open('https://market.yandex.ru/cc/7ycaNi', '_blank')}
                 >
                   <Icon name="Store" size={24} className="mr-2" />
                   Купить на Яндекс Маркете
