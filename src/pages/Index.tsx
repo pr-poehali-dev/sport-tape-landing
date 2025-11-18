@@ -22,7 +22,7 @@ const Index = () => {
     {
       id: "beige-perforated",
       name: "Бежевый с перфорацией",
-      color: "url('https://cdn.poehali.dev/files/e8d8fb1b-2980-460d-ae40-7c1dc5e5351b.jpg')",
+      color: "url('https://cdn.poehali.dev/files/5f9f506c-6ac9-4b55-8234-3dbf746d8ed3.jpg')",
       image: "https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg"
     },
     {
