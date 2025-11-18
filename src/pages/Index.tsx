@@ -362,7 +362,7 @@ const Index = () => {
       <footer className="py-12 bg-card border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground text-lg">
-            © 2024 Спортивные Тейпы. Профессиональная поддержка для спортсменов.
+            © 2025 Спортивные Тейпы. Профессиональная поддержка для спортсменов.
           </p>
         </div>
       </footer>
