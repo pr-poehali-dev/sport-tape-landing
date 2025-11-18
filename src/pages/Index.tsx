@@ -22,9 +22,9 @@ const Index = () => {
     {
       id: "beige-perforated",
       name: "Бежевый с перфорацией",
-      color: "#d4b896",
-      pattern: "radial-gradient(circle, rgba(0,0,0,0.3) 2px, transparent 2.5px)",
-      patternSize: "12px 12px",
+      color: "#c9a876",
+      pattern: "radial-gradient(circle, rgba(0,0,0,0.5) 3px, transparent 3.5px)",
+      patternSize: "15px 15px",
       image: "https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg"
     },
     {
