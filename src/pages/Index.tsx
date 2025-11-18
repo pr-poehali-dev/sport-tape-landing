@@ -61,7 +61,7 @@ const Index = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/df6ab86a-7ed4-44c5-9351-61f8675fca15.jpg" 
                   alt="Legioner Sports" 
-                  className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-2xl border-4 border-accent/20"
+                  className="w-64 h-64 md:w-80 md:h-80 rounded-2xl shadow-2xl border-4 border-accent/20"
                 />
                 <div>
                   <div className="text-2xl md:text-3xl text-accent font-bold tracking-wide">LEGIONER SPORTS</div>
@@ -328,32 +328,41 @@ const Index = () => {
                   step: "1",
                   title: "Подготовьте кожу",
                   description: "Очистите и высушите область нанесения. Удалите волосы при необходимости. Кожа должна быть чистой от кремов и масел.",
-                  icon: "Sparkles"
+                  icon: "Sparkles",
+                  image: "https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/6c5a36e3-4ec4-45fe-917b-7bed6392aef3.jpg"
                 },
                 {
                   step: "2",
                   title: "Отмерьте тейп",
                   description: "Отрежьте нужную длину тейпа. Закруглите углы ножницами - это продлит срок носки и предотвратит отклеивание.",
-                  icon: "Ruler"
+                  icon: "Ruler",
+                  image: "https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/3d678b5d-a839-4d82-b241-292aad41e427.jpg"
                 },
                 {
                   step: "3",
                   title: "Наклейте без натяжения",
                   description: "Зафиксируйте начало тейпа без натяжения. Наклеивайте по направлению роста мышц с нужным натяжением (обычно 25-50%).",
-                  icon: "Hand"
+                  icon: "Hand",
+                  image: "https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/be1bff8a-ea3e-47e4-9bbc-e373a9286ed7.jpg"
                 },
                 {
                   step: "4",
                   title: "Активируйте клей",
                   description: "Разгладьте тейп рукой несколько раз - тепло активирует клей. Избегайте воды в течение 1 часа после наклеивания.",
-                  icon: "Flame"
+                  icon: "Flame",
+                  image: "https://cdn.poehali.dev/projects/b003744a-44ad-477a-ae14-1a08eb1308f3/files/5a6307e0-05c2-4a8e-8826-b1ce2b8e95f7.jpg"
                 }
               ].map((item, index) => (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-in overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-48 object-cover rounded-xl mb-4"
+                  />
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-accent/20 border-2 border-accent rounded-2xl flex items-center justify-center">
