@@ -22,9 +22,9 @@ const Index = () => {
     {
       id: "beige-perforated",
       name: "Бежевый с перфорацией",
-      color: "#d4a574",
-      pattern: "radial-gradient(circle at 20% 20%, transparent 3px, #d4a574 3px), radial-gradient(circle at 60% 50%, transparent 3px, #d4a574 3px), radial-gradient(circle at 40% 80%, transparent 3px, #d4a574 3px)",
-      patternSize: "25px 25px",
+      color: "#d4b896",
+      pattern: "radial-gradient(circle, rgba(0,0,0,0.3) 2px, transparent 2.5px)",
+      patternSize: "12px 12px",
       image: "https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg"
     },
     {
@@ -331,8 +331,8 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
             <Button
               size="lg"
-              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-primary hover:bg-primary/90"
-              onClick={() => window.open('https://www.wildberries.ru', '_blank')}
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-[#cb11ab] hover:bg-[#cb11ab]/90"
+              onClick={() => window.open('https://www.wildberries.ru/seller/670383', '_blank')}
             >
               <Icon name="ShoppingCart" size={28} className="mr-3" />
               Wildberries
@@ -340,8 +340,8 @@ const Index = () => {
             
             <Button
               size="lg"
-              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-secondary hover:bg-secondary/90"
-              onClick={() => window.open('https://www.ozon.ru', '_blank')}
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-[#005bff] hover:bg-[#005bff]/90"
+              onClick={() => window.open('https://www.ozon.ru/seller/vm-1024153/?miniapp=seller_1024153', '_blank')}
             >
               <Icon name="Package" size={28} className="mr-3" />
               Ozon
@@ -349,8 +349,8 @@ const Index = () => {
             
             <Button
               size="lg"
-              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-accent hover:bg-accent/90 text-background"
-              onClick={() => window.open('https://market.yandex.ru', '_blank')}
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 bg-[#fc0] hover:bg-[#fc0]/90 text-black"
+              onClick={() => window.open('https://market.yandex.ru/cc/7ycaNi', '_blank')}
             >
               <Icon name="Store" size={28} className="mr-3" />
               Яндекс Маркет
