@@ -57,30 +57,30 @@ const Index = () => {
         <div className="container relative mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in order-2 lg:order-1">
-              <div className="flex flex-col items-start gap-3 mb-4">
+              <div className="flex flex-col items-center gap-6 mb-4">
                 <img 
                   src="https://cdn.poehali.dev/files/df6ab86a-7ed4-44c5-9351-61f8675fca15.jpg" 
                   alt="Legioner Sports" 
                   className="w-64 h-64 md:w-80 md:h-80 rounded-2xl shadow-2xl border-4 border-accent/20"
                 />
-                <div>
-                  <div className="text-2xl md:text-3xl text-accent font-bold tracking-wide">LEGIONER SPORTS</div>
-                  <div className="text-sm text-muted-foreground">Профессиональное качество</div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl text-accent font-bold tracking-wide">LEGIONER SPORTS</div>
+                  <div className="text-base text-muted-foreground mt-2">Профессиональное качество</div>
                 </div>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight text-center">
                 Кинезио{" "}
                 <span className="text-accent">
                   Тейпы
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-xl md:text-2xl text-muted-foreground text-center">
                 Профессиональная поддержка для мышц и суставов. Максимальная эффективность при тренировках и восстановлении.
               </p>
 
-              <div className="flex flex-col gap-4 pt-4">
+              <div className="flex flex-col gap-4 pt-4 items-center">
                 <Button
                   size="lg"
                   className="text-lg px-8 py-6 bg-[#cb11ab] hover:bg-[#cb11ab]/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -355,14 +355,9 @@ const Index = () => {
               ].map((item, index) => (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-in overflow-hidden"
+                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-48 object-cover rounded-xl mb-4"
-                  />
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-accent/20 border-2 border-accent rounded-2xl flex items-center justify-center">
