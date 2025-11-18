@@ -22,9 +22,7 @@ const Index = () => {
     {
       id: "beige-perforated",
       name: "Бежевый с перфорацией",
-      color: "#c9a876",
-      pattern: "radial-gradient(circle, rgba(0,0,0,0.5) 3px, transparent 3.5px)",
-      patternSize: "15px 15px",
+      color: "url('https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg')",
       image: "https://cdn.poehali.dev/files/39ce65b7-fa4c-4923-baa2-dcd4261223fa.jpg"
     },
     {
@@ -133,10 +131,9 @@ const Index = () => {
                           : 'border-border hover:border-accent/50'
                       }`}
                       style={{
-                        background: colorOption.pattern 
-                          ? `${colorOption.color}, ${colorOption.pattern}`
-                          : colorOption.color,
-                        backgroundSize: colorOption.patternSize || 'auto'
+                        background: colorOption.color,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
                       }}
                       title={colorOption.name}
                     />
@@ -173,10 +170,9 @@ const Index = () => {
                     <div
                       className="w-20 h-20 rounded-full shadow-lg border-4 border-background"
                       style={{
-                        background: colorOption.pattern 
-                          ? `${colorOption.color}, ${colorOption.pattern}`
-                          : colorOption.color,
-                        backgroundSize: colorOption.patternSize || 'auto'
+                        background: colorOption.color,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
                       }}
                     />
                     <span className="text-sm font-semibold text-center">{colorOption.name}</span>
@@ -315,6 +311,83 @@ const Index = () => {
                 </p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
+            Как правильно клеить тейпы
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  step: "1",
+                  title: "Подготовьте кожу",
+                  description: "Очистите и высушите область нанесения. Удалите волосы при необходимости. Кожа должна быть чистой от кремов и масел.",
+                  icon: "Sparkles"
+                },
+                {
+                  step: "2",
+                  title: "Отмерьте тейп",
+                  description: "Отрежьте нужную длину тейпа. Закруглите углы ножницами - это продлит срок носки и предотвратит отклеивание.",
+                  icon: "Ruler"
+                },
+                {
+                  step: "3",
+                  title: "Наклейте без натяжения",
+                  description: "Зафиксируйте начало тейпа без натяжения. Наклеивайте по направлению роста мышц с нужным натяжением (обычно 25-50%).",
+                  icon: "Hand"
+                },
+                {
+                  step: "4",
+                  title: "Активируйте клей",
+                  description: "Разгладьте тейп рукой несколько раз - тепло активирует клей. Избегайте воды в течение 1 часа после наклеивания.",
+                  icon: "Flame"
+                }
+              ].map((item, index) => (
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-accent/20 border-2 border-accent rounded-2xl flex items-center justify-center">
+                        <span className="text-2xl font-bold text-accent">{item.step}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Icon name={item.icon} size={24} className="text-accent" />
+                        <h3 className="text-xl font-bold">{item.title}</h3>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+            
+            <Card className="mt-8 p-6 bg-primary/5 border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <Icon name="Info" size={32} className="text-accent flex-shrink-0 mt-1" />
+                <div>
+                  <h4 className="text-lg font-bold mb-2">Важно знать</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Тейп держится 3-5 дней при правильном нанесении</li>
+                    <li>• Можно принимать душ, купаться в бассейне и заниматься спортом</li>
+                    <li>• Для снятия: намочите тейп, аккуратно снимайте по направлению роста волос</li>
+                    <li>• При раздражении кожи немедленно снимите тейп</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
